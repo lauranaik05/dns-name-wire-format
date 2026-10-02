@@ -1,6 +1,6 @@
 {
   "name": "dns-name-wire-format",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compresses and decompresses DNS domain names with pointer back-references per RFC 1035 section 4.1.4.",
   "type": "module",
   "main": "src/index.js",
