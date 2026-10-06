@@ -35,3 +35,10 @@ This library makes one deliberate trade-off: **encoding never emits pointers.** 
 ## Interpretation note
 
 Where RFC 1035 is permissive, this library picks the strict reading and states it above. It does not attempt to support extended label types, case-preserving round-trips, or message-level compression during encoding.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
